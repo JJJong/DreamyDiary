@@ -80,17 +80,17 @@ public class DiaryRepository implements IDiaryRepository{
 	
 	@Override
 	public void updateMemberInfo(MemberVO member) {
-		String sql = "UPDATE MEMBER SET"
+		String sql = "UPDATE MEMBER SET "
 				+ "PASSWORD=?, NAME=?, PHONE=?,"
 				+ "EMAIL=?, BIRTHDAY=?, GENDER=? WHERE USERID=?";
-		jdbcTemplate.update(sql,  
-				member.getUserId(), 
+		jdbcTemplate.update(sql,   
 				member.getPassWord(), 
 				member.getName(), 
 				member.getPhoneNumber(), 
 				member.getEmail(), 
 				member.getBirthDay(), 
-				member.getGender() 
+				member.getGender(),
+				member.getUserId()
 		);
 	}
 	

@@ -50,6 +50,7 @@
 				<form accept-charset="utf-8" method="get">
 					<button type="submit" class="btn btn-secondary" formaction="/dd/signup">회원가입</button>
 					<button type="submit" class="btn btn-secondary" formaction="/dd/resign">회원탈퇴</button>
+					<button type="submit" class="btn btn-secondary" formaction="/dd/modification">수정</button>
 				</form>
 			</div>
 		</div>

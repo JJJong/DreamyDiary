@@ -116,7 +116,7 @@
 // 				console.log(calendar.getEvents()[0].start);
 				console.log("data transfer click!");
 				console.log(calendar.getEvents().length);
-
+// 				console.log(calendar.getEvents()[0].id);
 				var eventObj = [];
 				for(var i=0; i<calendar.getEvents().length; ++i){
 					eventObj[i] = {
@@ -131,10 +131,11 @@
 				        url: "<c:url value='/events'/>",
 				        type: "post",
 				        data: JSON.stringify(eventObj[i]),
-				        dataType: "json",
+				        dataType: "text",
 				        contentType: "application/json",
 				        success: function(data) {
 				            console.log("data transfer success");
+				            alert("저장되었습니다.");
 				        },
 				        error: function(errorThrown) {
 				            console.log(errorThrown.statusText);
@@ -154,6 +155,7 @@
 				        	for(var i=0; i<data.length; ++i){
 				        		calendar.addEvent(data[i]);
 				        	}
+				        	alert("불러왔습니다.");
 				        },
 				        error:function() {
 				            console.log("error");

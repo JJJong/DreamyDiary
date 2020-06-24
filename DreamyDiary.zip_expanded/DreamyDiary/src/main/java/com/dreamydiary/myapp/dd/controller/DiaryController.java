@@ -99,5 +99,29 @@ public class DiaryController {
 //    	System.out.println(eventList);
         return eventList;
     }
+	
+	@RequestMapping(value = "/dd/modification")
+	public String modification(Model model) {
+		return "/dd/modification";
+	}
+	
+	@RequestMapping(value = "/dd/modification", method = RequestMethod.POST)
+	public String modification2Home(MemberVO memberVO, Model model) {
+		
+		List<MemberVO> memberList = service.getTotalMember();
+		//System.out.println(memberList);
+		for (MemberVO member : memberList) {
+			if(member.getUserId().equals(memberVO.getUserId())) {
+				System.out.println("id confirm");
+				if(member.getPassWord().equals(memberVO.getPassWord())) {
+					System.out.println("password confirm");
+					service.updateMemberInfo(memberVO);
+					return "redirect:/";
+				}
+			}
+		}
+		
+		return "/dd/modification";
+	}
 
 }

@@ -167,7 +167,7 @@
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary">
 		<a class="navbar-brand" href="#">MenuBar</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
 			aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -176,10 +176,10 @@
 
 		<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item">Title <input type="text" id="title-txt"></li>
-				<li class="nav-item">Color <input type="color" id="color-select" value="#FFFFFF"></li>
-				<li class="nav-item">Image <input type="text" id="image-url"></li>
-				<li class="nav-item">Select Menu
+				<li class="nav-item text-white">Title <input type="text" id="title-txt"></li>
+				<li class="nav-item text-white">Color <input type="color" id="color-select" value="#FFFFFF"></li>
+				<li class="nav-item text-white">Image <input type="text" id="image-url"></li>
+				<li class="nav-item text-white">Select Menu
 					<select id="select-menu">
 						<option value="Title">Title</option>
 						<option value="Color">Color</option>
@@ -187,15 +187,15 @@
 					</select>
 				</li>	
 				<li class="nav-item">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="button" id="save-event">Save</button>
+					<button class="btn btn-outline-warning my-2 my-sm-0" type="button" id="save-event">Save</button>
 				</li>
 				<li class="nav-item">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="button" id="get-event">Load</button>
+					<button class="btn btn-outline-warning my-2 my-sm-0" type="button" id="get-event">Load</button>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="search" placeholder="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				<button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Search</button>
 			</form>
 		</div>
 	</nav>
